@@ -119,7 +119,7 @@ class fast_weights_model(object):
 
         # Loss
         self.loss = tf.reduce_mean(
-            tf.nn.softmax_cross_entropy_with_logits(self.logits, self.y))
+            tf.nn.softmax_cross_entropy_with_logits(logits=self.logits, labels=self.y))
 
         # Optimization
         self.lr = tf.Variable(0.0, trainable=False)

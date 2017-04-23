@@ -56,7 +56,7 @@ def ln(inputs, epsilon=1e-5, scope=None):
 
 # Modified from:
 # https://github.com/tensorflow/tensorflow/blob/master/tensorflow/python/ops/rnn_cell.py
-class GRUCell(tf.nn.rnn_cell.RNNCell):
+class GRUCell(tf.contrib.rnn.RNNCell):
     """Gated Recurrent Unit cell (cf. http://arxiv.org/abs/1406.1078)."""
 
     def __init__(self, num_units, input_size=None, activation=tanh):
